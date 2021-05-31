@@ -1,0 +1,36 @@
+/*selector {declaration;} --,same as-- selector {property:value;}*/
+/*ids and class names cannot start with numbers*/
+/*the universal selector (*) selects every element on the page, ex.: * {...:...} applies to everything*/
+/*if multiple selectors have the same style definitions, they can be grouped together: h1, h2, h3 {...:...}*/
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+}
+
+h4 {
+    text-align: center;
+}
+
+p {
+    color: slateblue;
+    text-align: center;
+}
+
+#special_paragraph {
+    color: green;
+    font-size: 20px;
+}
+
+.orange {
+    color: orange;
+}
+
+p.orange {
+    font-size: 10px;
+}
+
+.large {
+    font-size: 25px;
+}
