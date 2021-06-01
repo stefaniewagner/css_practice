@@ -1,7 +1,15 @@
-/*selector {declaration;} --,same as-- selector {property:value;}*/
+/*selector {declaration;} --,same as-- selector {property:value;}
+the universal selector (*) selects every element on the page, ex.: * {...:...} applies to everything
+if multiple selectors have the same style definitions, they can be grouped together: h1, h2, h3 {...:...}*/
 /*ids and class names cannot start with numbers*/
-/*the universal selector (*) selects every element on the page, ex.: * {...:...} applies to everything*/
-/*if multiple selectors have the same style definitions, they can be grouped together: h1, h2, h3 {...:...}*/
+/*if multiple style sheets are used, the most recently read style sheet will be used ->cascading order 
+ex: first inline, then external/internal (depending on which was defined first), then browser default*/
+
+/*html elements*/
+
+body {
+    background-color: lavenderblush;
+}
 
 h1 {
     text-align: center;
@@ -18,17 +26,52 @@ p {
     text-align: center;
 }
 
+/*individual ids*/
+
 #special_paragraph {
     color: green;
     font-size: 20px;
 }
 
-.orange {
-    color: orange;
+#background_test {
+    color: white;
+    background-color: sienna;
+    opacity: 0.3; /*also makes child elements transparent*/
 }
+
+#background_test2 {
+    color: black;
+    background-color: rgb(201,160,207, 0.8); /*child elements are not transparent; just the background*/
+}
+
+#background_test3 {
+    color: hsl(0, 0%, 71%);
+    background-color: rgb(50,50,50);
+}
+
+#background_test4 {
+    color: #f0f; /*same as ff00ff*/
+    background-color: #faf; /*same as ffeeff*/
+}
+
+#background_test5 {
+    color: hsl(30,77%,12%,0.9);
+    background-color: hsl(214,44%,63%);
+}
+
+#border_test {
+    color: darkolivegreen;
+    border: 7px dotted chartreuse;
+}
+
+/*classes*/
 
 p.orange {
     font-size: 10px;
+}
+
+.orange {
+    color: orange;
 }
 
 .large {
