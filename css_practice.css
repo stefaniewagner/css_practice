@@ -1,9 +1,15 @@
 /*selector {declaration;} --,same as-- selector {property:value;}
 the universal selector (*) selects every element on the page, ex.: * {...:...} applies to everything
 if multiple selectors have the same style definitions, they can be grouped together: h1, h2, h3 {...:...}*/
+
 /*ids and class names cannot start with numbers*/
+
 /*if multiple style sheets are used, the most recently read style sheet will be used ->cascading order 
 ex: first inline, then external/internal (depending on which was defined first), then browser default*/
+
+/*background properties can all be in one declaration as long as they are declared in this order, ex:
+background : background-color  background-image background-repeat backgrount-attachment background-position; 
+background { #ffffff url("hi.png") no-repeat right top; }
 
 /*html elements*/
 
@@ -61,7 +67,41 @@ p {
 
 #border_test {
     color: darkolivegreen;
-    border: 7px dotted chartreuse;
+    border: 7px dotted chartreuse; /*shorthand for border-width border-style (required) border-color*/
+}
+
+#border_test2 {
+    border-style: inset;
+    border-width: 3px 10px; /* x y -> top/bottom left/right; w x y z -> top, right, bottom, left x y z -> top, left/right, bottom*/
+}
+
+#border_test3 {
+    border-top-style: double; /*border-top-color, border-top-width*/
+    border-right-style: solid;
+    border-bottom-style: ridge;
+    border-left-style: dashed;
+    border-width: 4px;
+    border-color: green blue indigo purple;
+}
+
+#border_test4 {
+    border-top: 5px solid salmon;
+    background-color: lightgray;
+}
+
+#border_test5 {
+    border: 3px solid goldenrod;
+    border-radius: 12px;
+}
+
+#background_image {
+    color: yellow;
+    background-repeat: no-repeat; /*ex: repeat-x or repeat-y*/
+    background-image: url(dandelions.jpg);
+    background-position: center; /*ex: right top*/
+    background-attachment: scroll; /*image scrolls up with page, else use fixed*/
+    margin-right: 200px;
+    margin-left: 200px;
 }
 
 /*classes*/
