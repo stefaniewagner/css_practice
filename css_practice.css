@@ -9,7 +9,9 @@ ex: first inline, then external/internal (depending on which was defined first),
 
 /*background properties can all be in one declaration as long as they are declared in this order, ex:
 background : background-color  background-image background-repeat backgrount-attachment background-position; 
-background { #ffffff url("hi.png") no-repeat right top; }
+background { #ffffff url("hi.png") no-repeat right top; } */
+
+/*<div> <p> ... </p> </div> <--- div is parent element of p, so p can inherit margin property of div*/
 
 /*html elements*/
 
@@ -48,26 +50,40 @@ p {
 #background_test2 {
     color: black;
     background-color: rgb(201,160,207, 0.8); /*child elements are not transparent; just the background*/
+    margin: 0 0 50px 0; 
+    /*test2 has 50 bottom margin and test3 has 20 top margin, because of margin collapse instead of 70px
+    between the two, there is only 50px*/
 }
 
 #background_test3 {
     color: hsl(0, 0%, 71%);
     background-color: rgb(50,50,50);
+    margin: 20px 0 0 0;
 }
 
 #background_test4 {
     color: #f0f; /*same as ff00ff*/
     background-color: #faf; /*same as ffeeff*/
+    width: 300px;
+    margin: auto; /*centers element, margin equally placed on left and right sides*/
 }
 
 #background_test5 {
     color: hsl(30,77%,12%,0.9);
     background-color: hsl(214,44%,63%);
+    /*also margin-top, margin-bottom, margin-left, margin-right, or margin: top right bottom left*/
+    margin: 70px; /*creates space around elements, can also use percentages or auto or inherit*/
 }
 
 #border_test {
     color: darkolivegreen;
     border: 7px dotted chartreuse; /*shorthand for border-width border-style (required) border-color*/
+    /* height and width does not include padding, margin, or borders; can use auto, length, percent, initial, inherit*/
+    /*can also set min-width and min-height*/
+    /*use max-width property instead of width so if screen is smaller, the element will also shrink vs width it stays the same*/
+    height: 50px;
+    width: 75%;
+    margin-left: 13%;
 }
 
 #border_test2 {
@@ -87,11 +103,19 @@ p {
 #border_test4 {
     border-top: 5px solid salmon;
     background-color: lightgray;
+    padding: 50px;
+    width: 300px;
+    box-sizing: border-box;
+    margin-left: 40%;
 }
 
 #border_test5 {
     border: 3px solid goldenrod;
     border-radius: 12px;
+    /* padding: top right bottom left*/
+    /* if padding (left/right) and width are defined, the total width is width + left padding + right padding*/
+    /* add box-sizing: border-box; property to keep width without adding padding space*/
+    padding: 70px; /*also padding-top, padding-right, padding-bottom, padding-left, can use length, percent, inherit*/
 }
 
 #background_image {
