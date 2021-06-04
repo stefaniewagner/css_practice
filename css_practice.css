@@ -36,6 +36,53 @@ p {
 
 /*individual ids*/
 
+#left_align {
+    font-size: 20px;
+    text-align: left;
+    text-transform: uppercase; /*or lowercase, capitalize*/
+    letter-spacing: -2px;
+    text-shadow: 2px 2px 5px purple; /* horizontal shadow, vertical shadow, blur effect, color*/
+}
+
+#center_align {
+    text-align: center;
+    text-decoration: line-through; /*or overline, underline (usually just used for links), none to make links not have underline*/
+    letter-spacing: 5px;
+    word-spacing: 10px; /*can also be negative*/
+    /*white-space: nowrap -> makes the words run off the page vs get wrapped to next line*/
+}
+
+#right_align {
+    text-align: right;
+    /*vertical-align: top/middle/bottom -> ex. align image within text */
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+#justify_align {
+    text-align: justify;
+    width: 100px;
+    border: 1px solid black;
+    padding: 10px;
+    text-indent: 30px;
+    line-height: 0.7;
+}
+
+#box_model {
+    color: goldenrod;
+    width: 300px;
+    padding: 30px;
+    border: 20px solid khaki;
+    margin: 10px;
+    outline-style: solid;
+    outline-color: black; /*can also use 'invert'*/
+    outline-width: thin;
+    outline-offset: 3px;
+    /*outline shorthand-> outline: outline-width outline-style outline-color*/
+    /*outline does not count towards total width; outline can overlap with other elements*/
+    /*total width = 300px + 30px + 30px + 20px + 20px + 10px + 10px = 420px */
+}
+
 #special_paragraph {
     color: green;
     font-size: 20px;
@@ -106,7 +153,7 @@ p {
     padding: 50px;
     width: 300px;
     box-sizing: border-box;
-    margin-left: 40%;
+    margin: auto;
 }
 
 #border_test5 {
