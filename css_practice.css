@@ -13,16 +13,23 @@ background { #ffffff url("hi.png") no-repeat right top; } */
 
 /*<div> <p> ... </p> </div> <--- div is parent element of p, so p can inherit margin property of div*/
 
+/* font: font-style font-variant font-weight font-size/line-height font-family ...font-size and font-family required*/
+
 /*html elements*/
 
 body {
     background-color: lavenderblush;
+    font-size: 100%; /*set default font-size in percent for body, so setting 'em' everywhere else works when user resizes font*/
 }
 
 h1 {
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 40px;
+    font-family: "Courier New", Courier, monospace; /*first is wanted font, second and third are more generic back up fonts*/
+    /*some fonts pair really well together, examples on w3schools css tutorial fonts -> font pairings*/
+    /*^ex. Helvetica for headings, Garamond for text*/
+    font-size: 2.5em; /*=40px, but this way the size scales when users resize the text size of browser; pixels/16=em */
+    /*can also set font-size in vw (viewport width), 1vw = 1% of viewport width; scales with size of viewport*/
+    font-variant: normal;
 }
 
 h4 {
@@ -35,6 +42,35 @@ p {
 }
 
 /*individual ids*/
+
+#material_icons{
+    text-align: left;
+    color: black;
+}
+
+#middle_cloud {
+    font-size: 50px;
+}
+
+#large_cloud {
+    font-size: 100px;
+}
+
+#large_blue_cloud {
+    font-size: 100px;
+    color: lightblue;
+}
+
+#large_red_cloud {
+    font-size: 100px;
+    color: lightcoral;
+}
+
+#computer_icon {
+    font-size: 100px;
+    color:rgb(104, 104, 104);
+    text-shadow: 5px 5px 10px rgb(7, 49, 23);
+}
 
 #left_align {
     font-size: 20px;
@@ -50,6 +86,7 @@ p {
     letter-spacing: 5px;
     word-spacing: 10px; /*can also be negative*/
     /*white-space: nowrap -> makes the words run off the page vs get wrapped to next line*/
+    font-weight: bold; /*or normal, lighter, a specific number*/
 }
 
 #right_align {
@@ -131,11 +168,13 @@ p {
     height: 50px;
     width: 75%;
     margin-left: 13%;
+    font-variant: small-caps;
 }
 
 #border_test2 {
     border-style: inset;
     border-width: 3px 10px; /* x y -> top/bottom left/right; w x y z -> top, right, bottom, left x y z -> top, left/right, bottom*/
+    font-style: italic;
 }
 
 #border_test3 {
