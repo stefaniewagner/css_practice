@@ -216,6 +216,40 @@ p {
 
 /*classes*/
 
+a.first_link:link {
+    color:blue;
+    /*text-decoration: none -> removes underline from link (or text-decoration: underline;)*/
+}
+
+a.first_link:visited {
+    color:lightskyblue;
+}
+
+a.first_link:hover { /*a:hover must come after a:link and a:visited*/
+    color: maroon;
+    background-color: lightgray;
+    cursor: wait;
+}
+
+a.first_link:active { /*a:active must come after a:hover*/
+    color: gray;
+}
+
+a.second_link:link, a.second_link:visited, a.second_link:hover, a.second_link:active {
+    border: 2px solid rgb(7, 49, 23);
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.second_link:hover {
+    background-color:rgb(7, 49, 23);
+    color:peachpuff;
+    cursor: crosshair;
+}
+
 p.orange {
     font-size: 10px;
 }
