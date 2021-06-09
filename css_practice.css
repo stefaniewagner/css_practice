@@ -216,6 +216,36 @@ p {
 
 /*classes*/
 
+ul.picture_bullets {
+    list-style: circle inside url('dog_circle.jpg');
+    /*order: list-style: list-style-type list-style-position list-style-image;*/
+    /*list-style-position: inside; pushes the text-> is 'outside' by default*/
+}
+
+ul.unordered1 {
+    list-style-type: circle; 
+    /*set to 'none' to remove bullets, also set margin and padding to 0 to remove default margin and padding*/
+    background: rgb(7,239,181);
+    padding: 20px;
+}
+
+ol.ordered1 {
+    list-style-type: hiragana;
+    background: rgb(30,11,96);
+    color: white;
+    padding: 50px;
+}
+
+ol.ordered1 li {
+    background: rgb(74, 46, 179);
+    margin: 5px;
+}
+
+ul.unordered1 li {
+    background: rgb(11, 172, 131);
+    padding: 5px;
+}
+
 a.first_link:link {
     color:blue;
     /*text-decoration: none -> removes underline from link (or text-decoration: underline;)*/
