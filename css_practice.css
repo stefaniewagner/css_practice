@@ -17,6 +17,38 @@ background { #ffffff url("hi.png") no-repeat right top; } */
 
 /*html elements*/
 
+table, td, th {
+    border: 1px solid darkgray;
+    /*border-bottom: ... to just have horizontal dividers*/
+    /*if table element has id, then use ex.: #id td, #id th, #id tr:hover, etc.*/
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+th {
+    height: 30px;
+    background-color: deeppink;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #d1cccc;;
+}
+
+tr:hover {
+    background-color: #fcdef9;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    /*text-align: center, or left, or right; th is center by default; td left by default*/
+    /*vertical-align: bottom/middle/top;, th and td have middle by default*/
+}
+
 body {
     background-color: lavenderblush;
     font-size: 100%; /*set default font-size in percent for body, so setting 'em' everywhere else works when user resizes font*/
@@ -42,6 +74,16 @@ p {
 }
 
 /*individual ids*/
+
+#link_list li {
+    display: inline; /*makes elements inline vs block, so they do not start on a new line*/
+    /*display: none; does not take up space, page acts as if it is not there*/
+    /*visibility: hidden; does not show up but it still takes up space as if it was being shown*/
+}
+
+#div_table {
+    overflow-x: auto; /*displays horizontal scroll bar if screen too small to show all content*/
+}
 
 #material_icons{
     text-align: left;
