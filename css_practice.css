@@ -24,8 +24,10 @@ table, td, th {
 }
 
 table {
-    width: 50%;
+    width: 50%; /*max-width is more compatible for smaller screen sizes (vs. width)*/
     border-collapse: collapse;
+    margin: auto;
+    position: static; /*default positioning*/
 }
 
 th {
@@ -112,6 +114,9 @@ p {
     font-size: 100px;
     color:rgb(104, 104, 104);
     text-shadow: 5px 5px 10px rgb(7, 49, 23);
+    position: sticky; /*toggles between relative and fixed positioning; fixed when scrolled past a certain point, else relative*/
+    bottom: 5px;
+    z-index: -1; /*when overlapping with other elements, it will be positioned behind them*/
 }
 
 #left_align {
@@ -252,8 +257,11 @@ p {
     background-image: url(dandelions.jpg);
     background-position: center; /*ex: right top*/
     background-attachment: scroll; /*image scrolls up with page, else use fixed*/
-    margin-right: 200px;
-    margin-left: 200px;
+    position: fixed; /*always stays in same position even if page is scrolled; positioned relative to the viewport*/
+    width: 300px;
+    margin: auto;
+    bottom: 0;
+    right: 0;
 }
 
 /*classes*/
@@ -262,6 +270,9 @@ ul.picture_bullets {
     list-style: circle inside url('dog_circle.jpg');
     /*order: list-style: list-style-type list-style-position list-style-image;*/
     /*list-style-position: inside; pushes the text-> is 'outside' by default*/
+    position: relative; /*positioned relative to its normal position, other content will not be adjusted to fill gap*/
+    /*position: absoute; positioned relative to the nearest positioned ancestor (anything except static position default)*/
+    left: 50px;
 }
 
 ul.unordered1 {
