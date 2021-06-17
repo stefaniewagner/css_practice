@@ -77,6 +77,35 @@ p {
 
 /*individual ids*/
 
+#auto_overflow {
+    overflow: auto;
+    /*can also just change overflow-x or overflow-y values specifically instead of both at once*/
+    width: 300px;
+    height: 50px;
+    border: 1px dotted black;
+}
+
+#scroll_overflow {
+    overflow: scroll;
+    width: 300px;
+    height: 50px;
+    border: 1px dotted black;
+}
+
+#hidden_overflow {
+    overflow: hidden;
+    width: 300px;
+    height: 50px;
+    border: 1px dotted black;
+}
+
+#visible_overflow {
+    overflow: visible; /*default*/
+    width: 300px;
+    height: 50px;
+    border: 1px dotted black;
+}
+
 #link_list li {
     display: inline; /*makes elements inline vs block, so they do not start on a new line*/
     /*display: none; does not take up space, page acts as if it is not there*/
