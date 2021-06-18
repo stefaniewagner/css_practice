@@ -83,6 +83,7 @@ p {
     width: 300px;
     height: 50px;
     border: 1px dotted black;
+    float: right; /*or left, or none (default)*/
 }
 
 #scroll_overflow {
@@ -90,6 +91,7 @@ p {
     width: 300px;
     height: 50px;
     border: 1px dotted black;
+    float: right;
 }
 
 #hidden_overflow {
@@ -97,13 +99,16 @@ p {
     width: 300px;
     height: 50px;
     border: 1px dotted black;
+    float: right;
 }
 
 #visible_overflow {
+    /*can use .clearfix::after{content:"";clear:both;display:table;} to solve overflow problem*/
     overflow: visible; /*default*/
     width: 300px;
     height: 50px;
     border: 1px dotted black;
+    float: right;
 }
 
 #link_list li {
@@ -114,6 +119,9 @@ p {
 
 #div_table {
     overflow-x: auto; /*displays horizontal scroll bar if screen too small to show all content*/
+    clear: right; 
+    /*moves element under defined oriented element (eg. overflow elements are float: right, so here
+    clear: right; moves table under right element; can also be left, or both*/
 }
 
 #material_icons{
