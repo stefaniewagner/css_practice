@@ -303,6 +303,61 @@ p {
 
 /*classes*/
 
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menu_item {
+    float: left;
+}
+
+.link {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: #111;
+}
+
+/*class can be assigned to which link is active, figure out how to change this probably when learning javascript*/
+.active {
+    background-color: blue;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.box {
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    box-sizing: border-box; /*includes padding and borders in the boxes size, so all three boxes fit on same line*/
+    text-align: center;
+}
+
+.first {
+    background-color: rgb(66, 66, 66);
+}
+
+.second {
+    background-color: rgb(173, 173, 173);
+}
+
+.third {
+    background-color: rgb(230, 228, 228);
+}
+
 ul.picture_bullets {
     list-style: circle inside url('dog_circle.jpg');
     /*order: list-style: list-style-type list-style-position list-style-image;*/
