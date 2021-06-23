@@ -441,6 +441,10 @@ ol.ordered1 {
 }
 
 ol.ordered1 li {
+    /*^space=descendant selector: selects all li elements that are inside the ol.ordered1 element*/
+    /*> is child selector, eg. ol.ordered1 > li*/
+    /*adjacent sibling selector: ol.ordered1 + li ---> select element directly after another element*/
+    /*general sibling selector: ol.ordered ~ li ---> select elements that are next sibling of specified element*/
     background: rgb(74, 46, 179);
     margin: 5px;
 }
