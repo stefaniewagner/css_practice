@@ -15,6 +15,15 @@ background { #ffffff url("hi.png") no-repeat right top; } */
 
 /* font: font-style font-variant font-weight font-size/line-height font-family ...font-size and font-family required*/
 
+/*p:first-child {} --> only affects the first p element that is first child of any element, eg. just first p in many p's
+p i:first-child {} --> affects first i in each p element
+p:first-child i {} --> affects all i's in first p element*/
+
+/*q:lang(no) {quotes:"~" "~";} --> defines quotation marks for <q> elements with lang="no"; :lang defines special rules
+for different languages*/
+
+/*input:focus {background-color:blue;} --> when input text field is clicked (focused on), background color will change*/
+
 /*html elements*/
 
 table, td, th {
@@ -41,6 +50,9 @@ tr:nth-child(even) {
 }
 
 tr:hover {
+    /*selector:pseudo-class*/
+    /*pseudo-classes are used to define a special state of an element*/
+    /*pseudo-elements, on the other hand, are used to style specified parts of an element*/
     background-color: #fcdef9;
 }
 
@@ -64,6 +76,12 @@ h1 {
     font-size: 2.5em; /*=40px, but this way the size scales when users resize the text size of browser; pixels/16=em */
     /*can also set font-size in vw (viewport width), 1vw = 1% of viewport width; scales with size of viewport*/
     font-variant: normal;
+}
+
+h1:hover {
+    /*hover can apply to other elements as well, not just links*/
+    background-color: darkred;
+    color: beige;
 }
 
 h4 {
@@ -311,6 +329,17 @@ p {
 }
 
 /*classes*/
+
+.hidden_element {
+    display: none;
+    background-color: cadetblue;
+    padding: 10px;
+}
+
+div:hover p {
+    /*when hovering over a div, display p as block element*/
+    display:block;
+}
 
 .centered_flexbox {
     display: flex;
