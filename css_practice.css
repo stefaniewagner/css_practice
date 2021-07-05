@@ -24,7 +24,31 @@ for different languages*/
 
 /*input:focus {background-color:blue;} --> when input text field is clicked (focused on), background color will change*/
 
+/*overall*/
+
+::selection {
+    /*rules for when user highlights something on web page*/
+    color: greenyellow;
+    background-color: black;
+}
+
+::-moz-selection {
+    /*code for firefox browsers*/
+    color: greenyellow;
+    background-color: black;
+}
+
 /*html elements*/
+
+img {
+    opacity: 0.5; /*0.0 fully transparent, 0.5 50% opacity, 1.0 normal*/
+    /*opacity can effect child elements (like p elements), which can make text difficult to read; use rgba values instead,
+    for example: background: rgba(x, x, x, opacity value); so text is still readable*/
+}
+
+img:hover {
+    opacity: 1.0;
+}
 
 table, td, th {
     border: 1px solid darkgray;
@@ -52,7 +76,10 @@ tr:nth-child(even) {
 tr:hover {
     /*selector:pseudo-class*/
     /*pseudo-classes are used to define a special state of an element*/
+    /*selector::pseudo-element*/
     /*pseudo-elements, on the other hand, are used to style specified parts of an element*/
+    /*::before adds content before each instance of an element, ::after adds content after element*/
+    /*::marker can style the markers of list items, ex. bullets and numbers*/
     background-color: #fcdef9;
 }
 
@@ -91,6 +118,15 @@ h4 {
 p {
     color: slateblue;
     text-align: center;
+}
+
+p::first-letter {
+    /*also ::first-line*/
+    /*the first letter of every p element will be stylized like stated below*/
+    /*pseudo-elements can be combined with classes, ex: p.intro::first-letter, and combined with each other*/
+    /*ex: p::before or p::after {content: url(xxx.gif);}*/
+    color: palevioletred;
+    font-size: xx-large;
 }
 
 /*individual ids*/
@@ -329,6 +365,34 @@ p {
 }
 
 /*classes*/
+
+.box_background {
+    background: url(long_shibe.jpg);
+    background-size: 150px auto;
+    border: 2px solid black;
+}
+
+.transparent_box {
+    margin: 20px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+.transparent_box p {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.opacity {
+    background: rgb(212, 69, 2);
+    opacity: 0.3; /*also makes text transparent*/
+}
+
+.rgba {
+    background: rgba(212, 69, 2, 0.3); /*only effects background, text still readable*/
+}
 
 .hidden_element {
     display: none;
