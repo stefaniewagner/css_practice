@@ -458,12 +458,43 @@ div:hover p {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /*^these three settings get rid of the default settings*/
+    overflow: hidden; /*prevents li elements from going outside of the list*/
     background-color: #333;
+    /*add position:fixed; top:0; width:100%; to make menu stay fixed at top of screen, even while scrolling; for this however,
+    the first element under it would need a padding and margin-top to make sure it does not overlap with the menu bar*/
+    position: -webkit-sticky; /*for Safari browsers*/
+    position: sticky; /*'sticks' to top of screen when scrolled down enough*/
+    top: 0;
 }
 
 .menu_item {
-    float: left;
+    float: left; 
+    /*could also do display:inline to get horizontal navigation bar, since li element is a block element and this way
+    everything is displayed on one line*/
+    /*add border-right:1px solid white; and for .menu_item:last-child{border-right:none;} to create link dividers*/
+}
+
+.menu_item a {
+    display: inline-block; 
+    /*^items displayed horizontally, often used for horizontal navigation links, can then specify padding, margin, etc.*/
+    color: white;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+}
+
+.menu_item a:hover:not(.active) { /*only effects what is not currently set as active class*/
+    background-color: #111;
+}
+
+/*class can be assigned to which link is active, figure out how to change this probably when learning javascript*/
+.active {
+    background-color: blue;
+}
+
+.right_float {
+    float: right;
 }
 
 .vertical_menu {
@@ -497,23 +528,6 @@ div:hover p {
 .vertical_menu a:hover {
     background-color: black;
     color: lightgreen;
-}
-
-.link {
-    display: inline-block; /*items displayed horizontally, often used for horizontal navigation links*/
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.link:hover:not(.active) { /*only effects what is not currently set as active class*/
-    background-color: #111;
-}
-
-/*class can be assigned to which link is active, figure out how to change this probably when learning javascript*/
-.active {
-    background-color: blue;
 }
 
 /*if element is taller than the element containing it, and it is positioned by float, it will overflow outside of its
