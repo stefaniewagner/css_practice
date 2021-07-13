@@ -132,12 +132,30 @@ p::first-letter {
 
 /*individual ids*/
 
+#dropdown_image {
+    position:relative;
+    display: inline-block;
+}
+
+#dropdown_img_content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#dropdown_image:hover #dropdown_img_content {
+    display: block;
+}
+
 #happy_shibe {
     /*to center an image, set width, display to block, and set left and right margins*/
     width: 15%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+#big_happy_shibe {
+    width: 100%;
 }
 
 #auto_overflow {
@@ -459,7 +477,8 @@ div:hover p {
     margin: 0;
     padding: 0;
     /*^these three settings get rid of the default settings*/
-    overflow: hidden; /*prevents li elements from going outside of the list*/
+    /* overflow: hidden; --> prevents li elements from going outside of the list, but because of dropdown menu
+    this was removed */
     background-color: #333;
     /*add position:fixed; top:0; width:100%; to make menu stay fixed at top of screen, even while scrolling; for this however,
     the first element under it would need a padding and margin-top to make sure it does not overlap with the menu bar*/
@@ -468,9 +487,11 @@ div:hover p {
     top: 0;
 }
 
-.menu li a {
-    display: inline-block;
+.menu_item a, .dropdown_button {
+    /*'higher up', so for example settings for the whole menu are chosen first, if that contradicts with other settings 
+    more specific to an element ex. li, these settings are then ignored*/
     color: white;
+    display: inline-block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -489,12 +510,14 @@ div:hover p {
 }
 
 .dropdown {
+    position: relative;
     display: inline-block;
 }
 
 .dropdown_content {
     display: none;
-    position: relative;
+    position: absolute;
+    /*add right:0; to make content go from right to left, eg. if button is on right side*/
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
