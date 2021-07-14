@@ -40,16 +40,6 @@ for different languages*/
 
 /*html elements*/
 
-img {
-    opacity: 0.5; /*0.0 fully transparent, 0.5 50% opacity, 1.0 normal*/
-    /*opacity can effect child elements (like p elements), which can make text difficult to read; use rgba values instead,
-    for example: background: rgba(x, x, x, opacity value); so text is still readable*/
-}
-
-img:hover {
-    opacity: 1.0;
-}
-
 table, td, th {
     border: 1px solid darkgray;
     /*border-bottom: ... to just have horizontal dividers*/
@@ -385,6 +375,50 @@ p::first-letter {
 
 /*classes*/
 
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.shiba_description {
+    padding: 15px;
+    text-align: center;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 60px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .box_background {
     background: url(long_shibe.jpg);
     background-size: 150px auto;
@@ -402,6 +436,16 @@ p::first-letter {
     color: black;
     font-size: 25px;
     font-weight: bold;
+}
+
+.transparent_shibe {
+    opacity: 0.5; /*0.0 fully transparent, 0.5 50% opacity, 1.0 normal*/
+    /*opacity can effect child elements (like p elements), which can make text difficult to read; use rgba values instead,
+    for example: background: rgba(x, x, x, opacity value); so text is still readable*/
+}
+
+.transparent_shibe:hover {
+    opacity: 1.0;
 }
 
 .opacity {
@@ -491,7 +535,7 @@ div:hover p {
     /*'higher up', so for example settings for the whole menu are chosen first, if that contradicts with other settings 
     more specific to an element ex. li, these settings are then ignored*/
     color: white;
-    display: inline-block;
+    display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
