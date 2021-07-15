@@ -122,6 +122,44 @@ p::first-letter {
 
 /*individual ids*/
 
+#navlist {
+    position: relative;
+}
+
+#navlist li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+}
+
+#navlist li, #navlist a {
+    height: 44px;
+    display: block;
+}
+
+#house {
+    left: 0px; /*starts on very left*/
+    width: 46px;
+    background: url('img_navsprites.gif') 0 0; 
+    /*background image and starting position in overall image: image, left px, top px*/
+}
+
+#house a:hover {
+    background: url('img_navsprites.gif') 0 -45px;
+}
+
+#arrow {
+    left: 66px; /*46px of house + 20px in between*/
+    width: 43px;
+    background: url('img_navsprites.gif') -91.2px 0;
+}
+
+#arrow a:hover {
+    background: url('img_navsprites.gif') -91.2px -45px;
+}
+
 #dropdown_image {
     position:relative;
     display: inline-block;
@@ -374,6 +412,10 @@ p::first-letter {
 }
 
 /*classes*/
+
+.desc {
+    text-align: left;
+}
 
 div.gallery {
     border: 1px solid #ccc;
