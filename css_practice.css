@@ -49,6 +49,19 @@ can use attribute selectors to for ex. style forms without classes or ids, ex: i
 
 /*html elements*/
 
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box; /*includes padding and margin in width and height*/
+    border: 1px solid #ccc;
+    border-radius: 4px; /*rounds the edges of the border*/
+}
+
+input[type=text]:focus {
+    border: 2px solid #777;
+}
+
 table, td, th {
     border: 1px solid darkgray;
     /*border-bottom: ... to just have horizontal dividers*/
@@ -130,6 +143,24 @@ p::first-letter {
 }
 
 /*individual ids*/
+
+#search {
+    width: 130px;
+    margin: 8px 0;
+    box-sizing: border-box; /*includes padding and margin in width and height*/
+    border: 1px solid #ccc;
+    border-radius: 4px; /*rounds the edges of the border*/
+    background-image: url(search_icon.png);
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 50px;
+    transition: width 0.4s ease-in-out; /*changes width, transition takes 0.4 seconds, slow start and slow end*/
+}
+
+#search:focus {
+    width: 100%;
+    border: 2px solid #777;
+}
 
 #navlist {
     position: relative;
