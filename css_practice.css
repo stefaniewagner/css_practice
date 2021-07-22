@@ -50,7 +50,6 @@ can use attribute selectors to for ex. style forms without classes or ids, ex: i
 /*html elements*/
 
 input[type=text] {
-    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box; /*includes padding and margin in width and height*/
@@ -144,6 +143,63 @@ p::first-letter {
 
 /*individual ids*/
 
+#fname, #lname, #select_form, #text_area {
+    float: left;
+    width: 85%;
+}
+
+#fname_label, #lname_label, #select_label, #text_label {
+    float: left;
+    width: 15%;
+    margin-top: 18px;
+}
+
+@media screen and (max-width: 600px) {
+    #fname, #lname, #select_form, #text_area, #fname_label, #lname_label, #select_label, #text_label {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+#form_div {
+    border-radius: 5px;
+    background-color: #dbdbdb;
+    padding: 20px;
+}
+
+#submit_button {
+    background-color: rgb(45, 0, 66);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 20px 8px;
+    cursor: pointer;
+}
+
+#submit_button:hover {
+    background-color: rgb(103, 50, 128);
+}
+
+#select_form {
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    margin: 8px 0px 15px 0px;  
+}
+
+#text_area {
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
 #search {
     width: 130px;
     margin: 8px 0;
@@ -158,7 +214,7 @@ p::first-letter {
 }
 
 #search:focus {
-    width: 100%;
+    width: 100%; /*when clicked on the width will change to 100% based on transition*/
     border: 2px solid #777;
 }
 
