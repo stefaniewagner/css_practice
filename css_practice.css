@@ -24,7 +24,7 @@ for different languages*/
 
 /*input:focus {background-color:blue;} --> when input text field is clicked (focused on), background color will change*/
 
-/* css [attribute] selector, ex: a[target]{...} just styles links with a target attribute
+/*css [attribute] selector, ex: a[target]{...} just styles links with a target attribute
 [attribute="value"] selector, ex: a[target="_blank"]{...} selects all a elements with target=_blank value
 [attribute~="value"] selector, ex: [title~="flower"]{...} selects all titles with 'flower' in it, separated by spaces
 [attribute|="value"] selector, ex: [class|="top"]{...} selects elements with class=top or class=top-....
@@ -32,6 +32,13 @@ for different languages*/
 [attribute$="value"] selector, ex: [class$="test"]{...} selects elements with class ending in test, like ...-test or ... test or ..test
 [attribute*="value"] selector, ex: [class*="te"]{...} selects elements with te substring anywhere in class name, like test, xtex
 can use attribute selectors to for ex. style forms without classes or ids, ex: input[type="text"]{}, input[type="button"]{}*/
+
+/*css counters are "variables" maintained by css whose values can be incremented by css rules, which track how many times they are
+used; counters let you adjust the appearance of the content based on its placement in the document, so you don't have to
+change each individual one but it intstead changes automatically
+eg: body{counter-reset:section;} h2::before{counter-increment:section; content:"Section " counter(section) ": ";
+^^counter for page is created, each h2 element will start with Section x:  , can also use subsection to nest sections
+counter can also be used in outlined lists because new instance of counter is created automatically*/
 
 /*overall*/
 
