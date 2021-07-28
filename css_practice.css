@@ -114,16 +114,6 @@ body {
     overflow-x: hidden;
 }
 
-h1 {
-    text-align: center;
-    font-family: "Courier New", Courier, monospace; /*first is wanted font, second and third are more generic back up fonts*/
-    /*some fonts pair really well together, examples on w3schools css tutorial fonts -> font pairings*/
-    /*^ex. Helvetica for headings, Garamond for text*/
-    font-size: 2.5em; /*=40px, but this way the size scales when users resize the text size of browser; pixels/16=em */
-    /*can also set font-size in vw (viewport width), 1vw = 1% of viewport width; scales with size of viewport*/
-    font-variant: normal;
-}
-
 h1:hover {
     /*hover can apply to other elements as well, not just links*/
     background-color: darkred;
@@ -516,6 +506,28 @@ p::first-letter {
 
 /*classes*/
 
+.footer {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace; /*first is wanted font, second and third are more generic back up fonts*/
+    /*some fonts pair really well together, examples on w3schools css tutorial fonts -> font pairings*/
+    /*^ex. Helvetica for headings, Garamond for text*/
+    font-variant: normal;
+    padding: 10px;
+    background-color: rgb(196, 179, 195);
+}
+
+.header {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace; /*first is wanted font, second and third are more generic back up fonts*/
+    /*some fonts pair really well together, examples on w3schools css tutorial fonts -> font pairings*/
+    /*^ex. Helvetica for headings, Garamond for text*/
+    font-size: 1.5em; /*=40px, but this way the size scales when users resize the text size of browser; pixels/16=em */
+    /*can also set font-size in vw (viewport width), 1vw = 1% of viewport width; scales with size of viewport*/
+    font-variant: normal;
+    padding: 10px;
+    background-color: rgb(196, 179, 195);
+}
+
 .desc {
     text-align: left;
 }
@@ -785,12 +797,35 @@ container. use clearfix hack to "fix" this problem*/
     display: table;
 }
 
+.uneven_box {
+    float: left;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.side {
+    width: 25%;
+    background-color: rgb(185, 148, 148);
+}
+
+.middle {
+    width: 50%;
+    background-color: rgb(71, 51, 51);
+}
+
 .box {
     float: left;
     width: 33.3%;
     padding: 50px;
     box-sizing: border-box; /*includes padding and borders in the boxes size, so all three boxes fit on same line*/
     text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .box, .uneven_box {
+        width: 100%;
+    }
 }
 
 .first {
