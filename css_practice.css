@@ -40,6 +40,12 @@ eg: body{counter-reset:section;} h2::before{counter-increment:section; content:"
 ^^counter for page is created, each h2 element will start with Section x:  , can also use subsection to nest sections
 counter can also be used in outlined lists because new instance of counter is created automatically*/
 
+/*size in px = pixels;
+absolute length: fixed size, elements will then be exactly that size; not recommended for screen use because we cannot know the 
+exact screen size, only recommended when size is known eg. printing paper; examples: cm, mm, in, px, pt, pc
+relative length: specifies a size relative to another length property; scales better than absolute lengths between different
+rendering mediums; examples: em, ex, ch, rem, vw, vh, vmin, vmax, %; (em and rem units are best for creating scalable layout)*/
+
 /*overall*/
 
 ::selection {
