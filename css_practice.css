@@ -7,6 +7,30 @@ if multiple selectors have the same style definitions, they can be grouped toget
 /*if multiple style sheets are used, the most recently read style sheet will be used ->cascading order 
 ex: first inline, then external/internal (depending on which was defined first), then browser default*/
 
+/*css specificity rules 
+start at 0, add 1000 for style attribue, 100 per ID, 10 per attribute/class/pseudo-class, 1 per element name/pseudo-element
+examples:
+h1                                                                 1 point (1 element)
+#content h1                                                        101 points (1 id, 1 element)
+<div id="content"><h1 style="color: #ffffff">Heading</h1></div>    1000 points (inline styling), so highest specificity, is applied
+
+if equal specificity: latest rule counts. ex:
+h1 {background-color: yellow;}
+h1 {background-color: red;} <-- latest, so will be red
+
+id selectors have higher specificity than attribute selectors. ex:
+div#a {background-color: green;} <--most specific, so will be applied
+#a {background-color: yellow;} <--second most specific
+div[id=a] {background-color: blue;} <--least specific
+
+if same style type defined both in external css file and html file, html file is 'closer' to element, is applied
+
+a class selector beats element selectors, ex:
+.intro {background-color: yellow;} <--will be used
+h1 {background-color: red;}
+
+universal values (*) and inhereited values have a specificity of 0*/
+
 /*background properties can all be in one declaration as long as they are declared in this order, ex:
 background : background-color  background-image background-repeat backgrount-attachment background-position; 
 background { #ffffff url("hi.png") no-repeat right top; } */
