@@ -70,6 +70,17 @@ exact screen size, only recommended when size is known eg. printing paper; examp
 relative length: specifies a size relative to another length property; scales better than absolute lengths between different
 rendering mediums; examples: em, ex, ch, rem, vw, vh, vmin, vmax, %; (em and rem units are best for creating scalable layout)*/
 
+/*!important example:
+#id {background-color: blue;}
+.class {background-color: yellow;}
+p {background-color: red !important;} <-- because of !important, it overrides even elements with a higher specificity 
+of a different style
+
+the only way to override !important is to use !important on a declaration of equal or higher specificity
+(same example as above but all have !important -> all are used, so one blue one yellow one red)
+avoid using !important unless absolutely necessary
+example: could be used when an element is within another element, and there are style conflicts*/
+
 /*overall*/
 
 ::selection {
@@ -169,6 +180,60 @@ p::first-letter {
 }
 
 /*individual ids*/
+
+#elliptical_border1 {
+    border-radius: 100px / 13px;
+    background:rgb(74, 46, 179);
+    padding: 20px;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
+
+#elliptical_border2 {
+    border-radius: 100%;
+    background:rgb(74, 46, 179);
+    padding: 20px;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
+
+#one_corner {
+    border-radius: 15px;
+    background:rgb(74, 46, 179);
+    padding: 20px;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
+
+#two_corners {
+    border-radius: 15px 45px;
+    background:rgb(74, 46, 179);
+    padding: 20px;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
+
+#three_corners {
+    border-radius: 15px 45px 70px;
+    background:rgb(74, 46, 179);
+    padding: 20px;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
+
+#four_corners {
+    border-radius: 15px 45px 70px 5px;
+    background:rgb(74, 46, 179);
+    padding: 20px;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
 
 #fname, #lname, #select_form, #text_area {
     float: left;
@@ -514,7 +579,8 @@ p::first-letter {
 
 #border_test5 {
     border: 3px solid goldenrod;
-    border-radius: 12px;
+    border-radius: 12px; /*makes rounded edges; effects all four edges (top left/right, bottom left/right) at once*/
+    /*also border-top-left-radius, border-bottom-right-radius, etc.*/
     /* padding: top right bottom left*/
     /* if padding (left/right) and width are defined, the total width is width + left padding + right padding*/
     /* add box-sizing: border-box; property to keep width without adding padding space*/
