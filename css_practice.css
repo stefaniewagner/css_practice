@@ -181,6 +181,29 @@ p::first-letter {
 
 /*individual ids*/
 
+#border_image {
+    border: 10px solid transparent;
+    border-image: url(border.png) 30 round;
+}
+
+#border_image2 {
+    border: 10px solid transparent;
+    border-image: url(border.png) 30 stretch;
+}
+
+#border_image3 {
+    border: 10px solid transparent;
+    border-image: url(border.png) 50 round;
+}
+#border_image4 {
+    border: 10px solid transparent;
+    border-image: url(border.png) 20% stretch;
+}
+#border_image5 {
+    border: 10px solid transparent;
+    border-image: url(border.png) 30% round;
+}
+
 #elliptical_border1 {
     border-radius: 100px / 13px;
     background:rgb(74, 46, 179);
