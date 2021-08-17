@@ -181,6 +181,23 @@ p::first-letter {
 
 /*individual ids*/
 
+#multiple_backgrounds {
+    border: 10px dotted black;
+    background: url(stars.png) right bottom no-repeat, url(background.jpg) center repeat;
+    /*^background listed first appear on top*/
+    background-size: contain, cover;
+    background-origin: border-box; /*or padding-box (default), content-box*/
+    background-clip: padding-box; /*or border-box (default), content-box*/
+    padding: 15px;
+    /*html { background:url(xxx.jpg) no-repeat center fixed; background-size:cover*/
+    /*^this makes background for whole website; html element always at least the size of browser window*/
+    /*can also make 'hero image' put a div inside a div, inner div is text, outer is background, kind of like what I did*/
+}
+
+#background_text {
+    color: white;
+}
+
 #border_image {
     border: 10px solid transparent;
     border-image: url(border.png) 30 round;
