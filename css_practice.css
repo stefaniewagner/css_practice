@@ -199,7 +199,10 @@ p::first-letter {
 }
 
 #border_image {
-    border: 10px solid transparent;
+    border: 10px solid transparent; 
+    /*transparent can also be used for background-color*/
+    /*also background-color: currentcolor; holds current value of color property of element*/
+    /*also background-color: inherit; interhits color from parent element*/
     border-image: url(border.png) 30 round;
 }
 
