@@ -181,6 +181,78 @@ p::first-letter {
 
 /*individual ids*/
 
+#gradient_1 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: linear-gradient(red, black);
+}
+
+#gradient_2 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: linear-gradient(to right, red, black);
+}
+
+#gradient_3 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: linear-gradient(to bottom right, red, black);
+}
+
+#gradient_4 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: linear-gradient(333deg, red, black);
+    /*0deg is like to top, 180deg is to bottom, etc.*/
+}
+
+#gradient_5 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: linear-gradient(123deg,red,orange,yellow,green,blue,violet);
+}
+
+#gradient_6 {
+    height: 100px;
+    background-image: linear-gradient(to right, rgba(0, 0, 204, 0), rgba(0, 0, 204, 1));
+}
+
+#gradient_7 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: repeating-linear-gradient(45deg, black, gray 7%, green 10%);
+}
+
+#gradient_8 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: radial-gradient(black,white,black,white,black,white,black);
+}
+
+#gradient_9 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: radial-gradient(blue 10%, violet 30%, yellow 10%);
+}
+
+#gradient_10 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: radial-gradient(circle, blue 10%, violet 30%, yellow 10%);
+}
+
+#gradient_11 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: radial-gradient(closest-side at 30% 50%, blue, violet, yellow);
+}
+
+#gradient_12 {
+    height: 100px;
+    background-color: red; /*for browsers that do not support gradients*/
+    background-image: repeating-radial-gradient(blue, violet 10%, yellow 15%);
+}
+
 #multiple_backgrounds {
     border: 10px dotted black;
     background: url(stars.png) right bottom no-repeat, url(background.jpg) center repeat;
