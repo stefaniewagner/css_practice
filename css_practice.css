@@ -181,6 +181,34 @@ p::first-letter {
 
 /*individual ids*/
 
+#box_shadow {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: red;
+    box-shadow: 10px 10px 5px darkred; 
+    /*horizontal and vertical shadow, blur, color*/
+}
+
+#box_shadow2 {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+}
+
+#shadow_text {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0px 0px 25px gray, 0px 0px 10px darkslategray; 
+    /*horizontal and vertical shadow, blur, color*/
+}
+
+#shadow_text2 {
+    color: lightgoldenrodyellow;
+    text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black; 
+}
+
 #gradient_1 {
     height: 100px;
     background-color: red; /*for browsers that do not support gradients*/
