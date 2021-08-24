@@ -81,6 +81,25 @@ the only way to override !important is to use !important on a declaration of equ
 avoid using !important unless absolutely necessary
 example: could be used when an element is within another element, and there are style conflicts*/
 
+/*define a name for the font, then point to the font file to use new fonts other than pre-selected "web-safe" fonts; 
+must also add another @font-face rule for bold version of the font, so you can have many rules for the same font
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_bold.woff);
+    font-weight: bold;
+}
+
+* {
+    font-family: myFirstFont;
+}
+*/
+
 /*overall*/
 
 ::selection {
@@ -181,6 +200,29 @@ p::first-letter {
 
 /*individual ids*/
 
+#overflow {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    text-overflow: ellipsis; /*or clip*/
+}
+
+#overflow:hover {
+    overflow: visible;
+}
+
+#wrap {
+    width: 9em;
+    border: 1px solid black;
+    word-wrap: break-word; /*else the long word would overflow outside of the box*/
+    word-break: break-all; /*or keep-all, where it only breaks at hyphens*/
+}
+
+#writing_mode {
+    writing-mode: vertical-rl; /*or horizontal-tb, vertical-lr*/
+}
+
 #box_shadow {
     width: 100px;
     height: 100px;
@@ -188,6 +230,8 @@ p::first-letter {
     background-color: red;
     box-shadow: 10px 10px 5px darkred; 
     /*horizontal and vertical shadow, blur, color*/
+    float: left;
+    margin: 10px;
 }
 
 #box_shadow2 {
@@ -196,6 +240,10 @@ p::first-letter {
     padding: 10px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
 }
 
 #shadow_text {
