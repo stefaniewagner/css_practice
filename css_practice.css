@@ -200,6 +200,30 @@ p::first-letter {
 
 /*individual ids*/
 
+#threeD_transform1 {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid black;
+    transform: rotateX(140deg); /*rotates around x-axis*/
+}
+
+#threeD_transform2 {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid black;
+    transform: rotateY(140deg); /*rotates around y-axis*/
+}
+
+#threeD_transform3 {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid black;
+    transform: rotateZ(140deg); /*rotates around z-axis*/
+}
+
 #matrix {
     width: 100px;
     height: 100px;
