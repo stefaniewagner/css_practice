@@ -200,6 +200,58 @@ p::first-letter {
 
 /*individual ids*/
 
+#animation_2 {
+    width: 100px;
+    height: 100px;
+    background-color: lawngreen;
+    position: relative; /*important so div moves on screen*/
+    animation-name: animation_2;
+    animation-duration: 4s;
+    animation-timing-function: linear; /*can also be ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier(n,n,n)*/
+    animation-delay: 1s; /*can also have negative values, so animation will start as if it already began*/
+    animation-iteration-count: 3; /*can set to infinite*/
+    animation-direction: alternate; /*can also be normal, reverse, alternate-reverse*/
+    animation-fill-mode: backwards; /*can also be none, forwards, both; element style when animation not playing*/
+    /*animation shorthand: 
+    animation: animation_2 4s linear 1s 3 alternate*/
+}
+
+@keyframes animation_2 {
+    0% {background-color: lawngreen; left: 0px; top: 0px;}
+    25% {background-color: lemonchiffon; left: 1000px; top: 0px;}
+    50% {background-color: khaki; left: 1000px; top: 200px;}
+    75% {background-color: saddlebrown; left: 0px; top: 200px;}
+    100% {background-color: lawngreen; left: 0px; top: 0px;}
+}
+
+#animation_1 {
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    animation-name: animation_1;
+    animation-duration: 4s;
+}
+
+@keyframes animation_1 {
+    from {background-color: teal;}
+    to {background-color: tomato;}
+}
+
+#transition {
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+    transition: width 2s, height 4s, transform 2s;
+    transition-timing-function: linear; /*can also be ease, ease-in, ease-out, ease-in-out, cubic-bezier(n,n,n)*/
+    transition-delay: 0.5s;
+}
+
+#transition:hover {
+    width: 1000px;
+    height: 500px;
+    transform: rotate(360deg);
+}
+
 #threeD_transform1 {
     width: 100px;
     height: 100px;
