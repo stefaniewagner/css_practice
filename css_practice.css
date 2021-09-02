@@ -925,6 +925,51 @@ p::first-letter {
 
 /*classes*/
 
+.tooltip {
+    /* a tooltip specifies extra information about something when mouse hovers over an element*/
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /*position the tooltip*/
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; /*top: 100% for it to be on bottom*/
+    left: 50%;
+    margin-left: -60px;
+    /*top: -5px;
+    left: 105%;*/ /*right: 105% to put it on left side*/
+
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%; /*arrow at bottom of tooltip; set to bottom for it to be at top; set to 50% for left/right arrow*/
+    left: 50%; /*arrow centered; set to left/right 100 percent for it to be on right/left side*/
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext{
+    visibility: visible;
+    opacity: 1;
+}
+
 .footer {
     text-align: center;
     font-family: "Courier New", Courier, monospace; /*first is wanted font, second and third are more generic back up fonts*/
