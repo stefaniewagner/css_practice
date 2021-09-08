@@ -200,6 +200,27 @@ p::first-letter {
 
 /*individual ids*/
 
+#happy_shibe_2 {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    /*max-width: 100%; height: auto; <--- to make image responsive based on size of screen*/
+}
+
+#happy_shibe_2:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#happy_shibe_1 {
+    width: 230px;
+    height: 300px;
+    border-radius: 50%; /*can also use pixels (rounded image) vs. percent (circled image), for example 8px*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /*<-this and previous two used to center element on page*/
+}
+
 #animation_2 {
     width: 100px;
     height: 100px;
