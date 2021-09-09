@@ -200,6 +200,39 @@ p::first-letter {
 
 /*individual ids*/
 
+#bottomleft {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
+}
+
+#shibe_text {
+    position: relative;
+}
+
+#shibe_text_img {
+    width: 20%;
+    height: auto;
+    opacity: 0.3;
+}
+
+#container_shibe {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+#polaroid_shibe {
+    width: 20%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-bottom: 25px;
+}
+
+#polaroid_shibe_img {
+    width: 100%; /*full width within the div, not the whole screen*/
+}
+
 #happy_shibe_2 {
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -945,6 +978,53 @@ p::first-letter {
 }
 
 /*classes*/
+
+.shadow {
+    filter: drop-shadow(8px 8px 10px gray);
+}
+
+.sepia {
+    filter: sepia(100%);
+}
+
+.saturate {
+    filter: saturate(7);
+}
+
+.opacity {
+    filter: opacity(80%);
+}
+
+.invert {
+    filter: invert(100%);
+}
+
+.huerotate {
+    filter: hue-rotate(180deg);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.contrast {
+    filter: contrast(180%);
+}
+
+.brightness {
+    filter: brightness(250%);
+}
+
+.blur {
+    filter: blur(4px);
+}
+
+.shibe_size {
+    width: 25%;
+    height: auto;
+    float: left;
+    max-width: 235px;
+}
 
 .tooltip {
     /* a tooltip specifies extra information about something when mouse hovers over an element*/
