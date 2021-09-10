@@ -254,6 +254,10 @@ p::first-letter {
     margin-right: auto; /*<-this and previous two used to center element on page*/
 }
 
+#happy_shibe_1:hover {
+    transform: scaleX(-1);
+}
+
 #animation_2 {
     width: 100px;
     height: 100px;
@@ -978,6 +982,45 @@ p::first-letter {
 }
 
 /*classes*/
+
+.container_fade_in {
+    position: relative;
+    width: 25%;
+}
+
+.container_fade_in:hover .shibe_fade_in{
+    opacity: 0.3;
+}
+
+.container_fade_in:hover .middle_fade_in {
+    opacity: 1;
+}
+
+.shibe_fade_in {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle_fade_in {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.text_fade_in {
+    background-color: orange;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
 
 .shadow {
     filter: drop-shadow(8px 8px 10px gray);
